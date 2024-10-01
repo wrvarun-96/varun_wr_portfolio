@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,11 +14,9 @@
 </head>
 
 <body id="top">
-
 <!-- #HEADER -->
 <header class="header" data-header>
     <div class="container">
-        <!-- Centering the name -->
         <button class="nav-toggle-btn" aria-label="Toggle Menu" data-nav-toggle-btn>
             <ion-icon name="menu-outline" class="menu-icon"></ion-icon>
             <ion-icon name="close-outline" class="close-icon"></ion-icon>
@@ -41,9 +38,6 @@
     </div>
 </header>
 
-
-
-
 <main>
     <article>
         <main>
@@ -51,14 +45,15 @@
                 <div class="container">
                     <div class="hero-content">
                         <h1 class="hero-title"><strong>VARUN WOODI RAGHAVENDRA</strong></h1>
-                        <h2 class="hero-subtitle" id="subtitle"></h2>
                     </div>
                 </div>
             </section>
         </main>
     </article>
-
 </main>
+
+
+
 
       <!--
         - #ABOUT
@@ -371,13 +366,14 @@
                 <h2 class="blog-title">Statistics</h2>
                 <div class="subcategory">
                     <h3 class="blog-subtitle">Intro to statistics</h3>
-                    <p class="blog-description">Learn about probability distributions and foundational statistics concepts.</p>
+                    <p class="blog-description">"Master the Foundations: Your Gateway to Data-Driven Insights."</p>
                     <a href="https://medium.com/@wrvarun96/intro-to-statistics-ed120c99e774" class="btn-read-more">Read More</a>
                 </div>
                 <br>
                 <div class="subcategory">
-                    <h3 class="blog-subtitle">Statistical Data Analysis</h3>
-                    <a href="#" class="btn-read-more">Read More</a>
+                    <h3 class="blog-subtitle">Probability</h3>
+                    <p class="blog-description">"Unlock the Power of Uncertainty: The Heart of Statistical Thinking."</p>
+                    <a href="#https://medium.com/@wrvarun96/probability-8a60f49fa02f" class="btn-read-more">Read More</a>
                 </div>
             </div>
 
@@ -385,12 +381,14 @@
             <div class="blog-card">
                 <h2 class="blog-title">Machine Learning</h2>
                 <div class="subcategory">
-                    <h3 class="blog-subtitle">Supervised Learning</h3>
+                    <h3 class="blog-subtitle">Naive Bayes Algorithm</h3>
+                    <p class="blog-description">"Simplicity Meets Power: Fast and Accurate Predictions with Naive Bayes"</p>
                     <a href="#" class="btn-read-more">Read More</a>
                 </div>
                 <br>
                 <div class="subcategory">
                     <h3 class="blog-subtitle">Unsupervised Learning</h3>
+                    <p class="blog-description">"Unlock Hidden Patterns: Discover Insights Without Labels in Unsupervised Learning"</p>
                     <a href="#" class="btn-read-more">Read More</a>
                 </div>
             </div>
@@ -400,11 +398,13 @@
                 <h2 class="blog-title">Deep Learning</h2>
                 <div class="subcategory">
                     <h3 class="blog-subtitle">Deep Neural Introduction</h3>
+                    <p class="blog-description">"Building Intelligence: An Introduction to Deep Neural Networks and Their Learning Power"</p>
                     <a href="https://medium.com/@wrvarun96/intro-to-statistics-ed120c99e774" class="btn-read-more">Read More</a>
                 </div>
                 <br>
                 <div class="subcategory">
                     <h3 class="blog-subtitle">Regularization in Deep Learning</h3>
+                    <p class="blog-description">"Preventing Overfitting: A Comprehensive Guide to Regularization in Deep Learning."</p>
                     <a href="https://medium.com/@wrvarun96/regularization-in-deep-learning-69d1679f1ad3" class="btn-read-more">Read More</a>
                 </div>
             </div>
@@ -414,11 +414,13 @@
                 <h2 class="blog-title">Large Language Models</h2>
                 <div class="subcategory">
                     <h3 class="blog-subtitle">Power of LLMs</h3>
+                    <p class="blog-description">"Unleashing the Power of Large Language Models: Transforming NLP and Beyond."</p>
                     <a href="https://medium.com/@wrvarun96/power-of-large-language-models-a-comprehensive-introduction-32a36dd17ccf" class="btn-read-more">Read More</a>
                 </div>
                 <br>
                 <div class="subcategory">
                     <h3 class="blog-subtitle">LLM Application Dev: Prompt Templates</h3>
+                    <p class="blog-description">"Mastering LLM Application Development: Harnessing the Power of Prompt Templates"</p>
                     <a href="https://medium.com/@wrvarun96/langchain-for-llm-applications-development-prompt-templates-2dddc996bd7b" class="btn-read-more">Read More</a>
                 </div>
             </div>
@@ -496,14 +498,41 @@
 
 
 
+<!-- JavaScript for rotating text effect -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const rotatingTexts = ["Data Scientist", "System Engineer"];
+        let currentIndex = 0;
+        let currentText = '';
+        let letterIndex = 0;
+        let isDeleting = false;
+        const rotatingTextElement = document.getElementById("rotating-text");
 
-<!--
-  - custom js link
--->
-<script src="./assets/js/script.js"></script>
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        function type() {
+            if (!isDeleting && letterIndex <= rotatingTexts[currentIndex].length) {
+                currentText = rotatingTexts[currentIndex].substring(0, letterIndex);
+                rotatingTextElement.textContent = currentText;
+                letterIndex++;
+                setTimeout(type, 150); // Speed of typing
+            } else if (isDeleting && letterIndex >= 0) {
+                currentText = rotatingTexts[currentIndex].substring(0, letterIndex);
+                rotatingTextElement.textContent = currentText;
+                letterIndex--;
+                setTimeout(type, 100); // Speed of deleting
+            }
 
+            if (letterIndex === rotatingTexts[currentIndex].length) {
+                setTimeout(() => { isDeleting = true; type(); }, 2000); // Wait before deleting
+            } else if (letterIndex === 0 && isDeleting) {
+                isDeleting = false;
+                currentIndex = (currentIndex + 1) % rotatingTexts.length; // Loop through texts
+                setTimeout(type, 500);
+            }
+        }
+
+        type();
+    });
+</script>
 </body>
 
 </html>
