@@ -298,7 +298,7 @@ body {
 
 
 
-/*-----------------------------------*\
+"/*-----------------------------------*\
   #HERO
 \*-----------------------------------*/
 
@@ -362,6 +362,7 @@ body {
   align-items: start;
   gap: 10px;
 }
+"
 
 
 
@@ -782,12 +783,12 @@ Blog Section Heading
 
 
 #main-blogs .section-title {
-  font-size: 35px; /* Size of the main heading */
+  font-size: 100px; /* Size of the main heading */
   font-weight: bold;
   color: #ffffff; /* White text for the title */
   margin-bottom: 20px;
-  text-align: left; /* Align the heading to the left */
-  padding-left: 420px; /* Add padding to shift it slightly to the left */
+  text-align: center; /* Center the heading */
+  margin: 0 auto; /* Ensures the title is centered within its container */
 }
 
 .blog {
@@ -801,7 +802,7 @@ Blog Section Heading
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); /* Adjust column width */
   gap: 140px; /* Same gap as project section */
   max-width: 150%; /* Same width as project section */
-  margin: -30px; /* Align the grid with the project section */
+  margin: 0 auto; /* Center the grid */
 }
 
 .blog-card {
@@ -815,7 +816,7 @@ Blog Section Heading
   overflow: hidden;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   height: auto;
-  margin-left: -80px; /* Align cards with the project section */
+  margin: 0; /* Remove negative margin */
 }
 
 .blog-card::before {
@@ -830,7 +831,6 @@ Blog Section Heading
   opacity: 0;
   transition: opacity 0.4s ease;
 }
-
 
 .blog-card:hover::before {
   opacity: 1;
@@ -874,8 +874,7 @@ Blog Section Heading
   color: var(--midnight-blue); /* Same color as project section */
   z-index: 2;
 }
-/* Styling for the "Read More" button */
-/* Styling for the "Read More" button */
+
 .btn-read-more {
   z-index: 2; /* Ensure the button is above the pseudo-element */
   position: relative; /* Ensure z-index works properly */
@@ -890,14 +889,11 @@ Blog Section Heading
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover effect for the "Read More" button */
 .btn-read-more:hover {
   background-color: #0056b3;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-
-/* Additional styling for subcategory */
 .subcategory {
   margin-bottom: 20px; /* Space between subcategories */
 }
@@ -1393,7 +1389,7 @@ Contact Section */
 
   .blog-list {
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    gap: 50px;
   }
 
 
