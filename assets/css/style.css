@@ -775,15 +775,14 @@ body {
 }
 
 
-
-
 /*
-Blog Section Heading
-*/
+BLOGS
+ */
+
 
 
 #main-blogs .section-title {
-  font-size: 100px; /* Size of the main heading */
+  font-size: 120px; /* Size of the main heading */
   font-weight: bold;
   color: #ffffff; /* White text for the title */
   margin-bottom: 20px;
@@ -858,7 +857,7 @@ Blog Section Heading
   font-size: var(--fs-4);
   font-weight: var(--fw-700);
   margin-bottom: 10px;
-  color: #1d1f22; /* Matching text color */
+  color: #000000; /* Change title color to black */
   z-index: 2;
   text-transform: uppercase;
   min-height: 60px;
