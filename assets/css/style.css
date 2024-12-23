@@ -651,27 +651,26 @@ body {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(250px, 1fr)); /* Change to 4 columns */
-  gap: 30px; /* Adjust gap for spacing between cards */
-  max-width: 100%; /* Ensure it fits the container */
+  grid-template-columns: repeat(4, 1fr); /* 4 columns for all cards in one row */
+  gap: 30px; /* Add spacing between cards */
+  max-width: 100%;
   margin: 0 auto; /* Center the grid within the container */
 }
 
+
 .project-card {
-  position: relative; /* This ensures elements inside are properly stacked */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border: none;
+  margin: 0; /* Remove the negative margin causing misalignment */
   padding: 20px;
   background: linear-gradient(145deg, #ffffff, #e6e6e6);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   border-radius: var(--radius-15);
-  overflow: hidden;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   height: auto;
-  margin-left: -80px; /* Shift project cards more to the left */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center-align content inside the card */
 }
+
 
 
 .project-card::before {
