@@ -651,11 +651,13 @@ body {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns for all cards in one row */
-  gap: 30px; /* Add spacing between cards */
-  max-width: 100%;
-  margin: 0 auto; /* Center the grid within the container */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Same as Experience */
+  gap: 20px; /* Matches the gap from Experience */
+  max-width: 100%; /* Ensure it fits the container */
+  margin: 0 auto; /* Center the grid */
+  padding: 0 20px; /* Add padding for consistency */
 }
+
 
 
 .project-card {
