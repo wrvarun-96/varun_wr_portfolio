@@ -651,10 +651,10 @@ body {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(270px, 1fr));
-  gap: 140px;
-  max-width: 150%;
-  margin: -30px;
+  grid-template-columns: repeat(4, minmax(250px, 1fr)); /* Change to 4 columns */
+  gap: 30px; /* Adjust gap for spacing between cards */
+  max-width: 100%; /* Ensure it fits the container */
+  margin: 0 auto; /* Center the grid within the container */
 }
 
 .project-card {
@@ -1391,7 +1391,17 @@ Contact Section */
     gap: 50px;
   }
 
+@media (max-width: 1024px) {
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(250px, 1fr)); /* 2 columns for tablets */
+  }
+}
 
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: repeat(1, minmax(250px, 1fr)); /* 1 column for mobile */
+  }
+}
 
   /**
    * FOOTER
